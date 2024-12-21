@@ -121,10 +121,10 @@ for i in range(1, 101):
 
     texts_latent.append(text_extractor.extract_text_features(text_file_path))
 
-    if (df.loc[df['filename']==file_name]['Language']=='English').bool():
-        labels.append(0)
-    else:
+    if (df.loc[df['filename'] == file_name]['Story_type'] == 'True Story').bool():
         labels.append(1)
+    else:
+        labels.append(0)
 
 
     
